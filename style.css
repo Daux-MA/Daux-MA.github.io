@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  position: relative;
+  transition: font-weight 0.2s ease;
+}
+
+.nav-links a:hover {
+  font-weight: 600;
+}
+
+
+.lang-btn {
+  text-decoration: none;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.intro {
+  max-width: 500px;
+}
+
+.photo-frame {
+  width: 260px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+
+h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+}
+.documents {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.doc-card {
+  flex: 1 1 250px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.doc-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.skills-list strong {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.doc-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  margin-top: 60px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,section {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+
+  section {
+    margin: 30px auto;
+  }
+  
+  .photo-frame {
+    width: 200px;
+    height: 260px;
+    margin-bottom: 20px;
+  }
+  .documents {
+    flex-direction: column;
+  }
+
+}
+
